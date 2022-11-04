@@ -22,8 +22,11 @@
 
 <button class="btn btn-danger" (click)="printLogFile($event)">{{printBtn}}</button>
 
+<h2>Data from child to parent {{message}}</h2>
 
-<app-course></app-course>
+
+<app-course [parentCourseName]="courseName" (childEvent)="message=$event"></app-course>
+
 
 <hr>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-course',
@@ -15,5 +15,14 @@ export class CourseComponent implements OnInit {
   public ageVal:number | any;
 
   public displayFlag:boolean | any = false;
+
+  @Input() public parentCourseName:string|any;
+
+  @Output() public childEvent = new EventEmitter();
+
+  emitEventChild(){
+    this.childEvent.emit("This data is going from child to parent component");
+  }
+
 
 }

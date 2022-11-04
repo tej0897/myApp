@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -37,5 +38,11 @@ export class AppComponent {
       this.printBtn="Log report printed...";}, 6000);
 
   }
+
+  @Output() public courseName = "Angular.io";
+
+  @Input() public message:any;
+  
+
 
 }
