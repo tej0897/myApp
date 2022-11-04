@@ -1,0 +1,15 @@
+<h1>Student Details</h1>
+
+<h3>Name is : {{studentObj.studentName}}</h3>
+<h3>Email is : {{studentObj.studentEmail}} </h3>
+<h3>Phone Number is : {{studentObj.studentContact}}</h3>
+<h3>Subject is : {{studentObj.studentSubject}}</h3>
+
+<div [ngSwitch]="studentObj.studentSubject">
+
+    <div *ngSwitchCase="'Java'"> <h3>You are a Java Developer</h3> </div>
+    <div *ngSwitchCase="'Python'"><h3>You are a Python Developer! </h3> </div>
+    <div *ngSwitchCase="'C++'"><h3> You are a C++ Developer! </h3></div>
+    <div *ngSwitchDefault> <h3> You are a not a Code Developer! </h3></div>
+
+</div>

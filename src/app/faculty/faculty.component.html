@@ -1,0 +1,29 @@
+<ul *ngFor="let f of faculty">
+
+    <li *ngIf="f.YOE >= 20; else template2">
+        Senior Consultant: {{f.Name}}<br>
+    </li>
+
+    <ng-template #template2>
+        <li *ngIf="f.YOE >= 15; else template3">
+            Senior Trainee: {{f.Name}}<br>
+        </li>
+    </ng-template>
+
+    <ng-template #template3>
+        <li *ngIf="f.YOE >= 10; else template3">
+            Trainee: {{f.Name}}<br>
+        </li>
+    </ng-template>
+
+    <ng-template #template4>
+        <li>
+            Dev
+        </li>
+    </ng-template>
+
+</ul>
+
+<ul *ngFor="let fac of faculty">
+    <li>{{fac.empID}}-->{{fac.domain}}-->{{fac.Name}}-->{{fac.YOE}}||</li>
+</ul>

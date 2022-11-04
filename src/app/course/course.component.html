@@ -1,0 +1,16 @@
+<div>
+
+    <div *ngIf="displayFlag; then thenBlock; else block2">
+
+
+    </div>
+
+    <ng-template #thenBlock>
+        <h3>This is True Flag Value Block baby!</h3>
+    </ng-template>
+
+    <ng-template #block2>
+        <h3>This is False Value Block baby!</h3>
+    </ng-template>
+
+</div>

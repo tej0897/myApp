@@ -7,4 +7,35 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myApp';
+
+  public myCompany : string | any = "Cognizant";  // returns any
+
+  public btnStyle = "btn btn-warning";            // style property
+
+  public disableStatus:boolean = false;            // passing property -> true -> does not allow button to be clicked and vice-versa
+
+
+  showMessage = ($event:any) => {
+    console.log("Button is clicked!! ");
+    alert("Button is clicked!")
+  }
+
+  updateCompany = ($event:any) => {
+    this.myCompany = $event.target.value;
+    console.log(this.myCompany);
+  }
+
+  public printBtn : string|any = "Print Log Stuff";
+
+  printLogFile = ($event:any) => {
+    console.log("Button is clicked:/");
+    this.printBtn="Generating report, Please wait...";
+
+    console.log($event);
+
+    setTimeout(()=>{
+      this.printBtn="Log report printed...";}, 6000);
+
+  }
+
 }
